@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Bootstrap CSS --> <!-----------------https://cdnjs.com---->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+<body>	
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+					
+							<label class="form-label" for="hub">Hub<span style="color:#ff0000">*</span></label>
+							<input type="text" id="hub" name="hub" class="form-control" readonly="readonly" required/><br>
+							
+												
+					
+							<label class="form-label" for="supplier">Supplier<span style="color:#ff0000">*</span></label>
+							<input type="text" id="supplier" name="supplier" class="form-control" value=SOMEID readonly="readonly" required/><br>
+							
+												
+					
+							<label class="form-label" for="supplier_name">Supplier Name</label>
+							<input type="text" id="supplier_name" name="supplier_name" readonly="readonly" value=Sunil N class="form-control" required/><br>
+						
+					</div>
+			 
+					<div class="col-6">
+							<label class="form-label" for="grn">GRN</label>
+							<input type="text" id="grn" name="grn" class="form-control" readonly="readonly" required/>
+							 
+					</div>
+				</div><br>
+				
+				
+				<div class="container">
+				<h5><b><p class="text-left">SKU Summary</p></b></h5>
+				<h6><p class="text-left">SKU Table</p></h6>
+				<table class="table table-bordered">
+					  <thead>
+						<tr>
+						  <th scope="col">No.</th>
+						  <th scope="col">SKU</th>
+						  <th scope="col">SKU Description</th>
+						  <th scope="col">Standard Crate Quan..</th>
+						  <th scope="col">Procured Quantity</th>
+						</tr>
+					  </thead>
+					  <tbody>
+					  
+						<tr>
+						  <th>0</th>
+						  <b><td>10000298</td></b>
+						  <td>Mango Banganapalli 1 kg</td>
+						  <td>18000</td>
+						  <b><td>18000</td></b>
+						</tr>
+						
+					  <tbody>
+					  </table>
+				</div><br>
+				
+				<div class="conainer">
+				<h5><b><p class="text-left">Crate List</p></b></h5>
+				<h6><p class="text-left">Crate Table</p></h6>
+				<table class="table table-bordered">
+					  <thead>
+						<tr>
+						  <th scope="col">No.</th>
+						  <th scope="col">Crate</th>
+						  <th scope="col">SKU</th>
+						  <th scope="col">Packed Quantity</th>
+						  <th scope="col">Crate Weight</th>
+						  <th scope="col">is Final Crate</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						
+					
+						  <tr>
+						  <th>0</th>
+						  <b><td>3e410b75b4</td></b>
+						  <td>10000298</td>
+						  <td>18100</td>
+						  <td>18100</td>
+						  <td>0</td>
+						</tr>
+						
+						  <tr>
+						  <th>1</th>
+						  <b><td>7c2eba029c</td></b>
+						  <td>10000298</td>
+						  <td>18090</td>
+						  <td>18090</td>
+						  <td>0</td>
+						</tr>
+						
+					  <tbody>
+					  </table>
+				</div>
+				
+		</div>
+</body>
+</html>

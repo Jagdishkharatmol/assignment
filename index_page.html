@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <!-- Bootstrap CSS --> <!-----------------https://cdnjs.com---->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+<body>	
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+					
+							<label class="form-label" for="hub">Hub<span style="color:#ff0000">*</span></label>
+							<input type="text" id="hub" name="hub" class="form-control" readonly="readonly" required/><br>
+							
+												
+					
+							<label class="form-label" for="supplier">Supplier<span style="color:#ff0000">*</span></label>
+							<input type="text" id="supplier" name="supplier" class="form-control" value={{supplier}} readonly="readonly" required/><br>
+							
+												
+					
+							<label class="form-label" for="supplier_name">Supplier Name</label>
+							<input type="text" id="supplier_name" name="supplier_name" readonly="readonly" value={{supplier_name}} class="form-control" required/><br>
+						
+					</div>
+			 
+					<div class="col-6">
+							<label class="form-label" for="grn">GRN</label>
+							<input type="text" id="grn" name="grn" class="form-control" readonly="readonly" required/>
+							 
+					</div>
+				</div><br>
+				
+				
+				<div class="container">
+				<h5><b><p class="text-left">SKU Summary</p></b></h5>
+				<h6><p class="text-left">SKU Table</p></h6>
+				<table class="table table-bordered">
+					  <thead>
+						<tr>
+						  <th scope="col">No.</th>
+						  <th scope="col">SKU</th>
+						  <th scope="col">SKU Description</th>
+						  <th scope="col">Standard Crate Quan..</th>
+						  <th scope="col">Procured Quantity</th>
+						</tr>
+					  </thead>
+					  <tbody>
+					  {%	for index in range(sku_table|length) %}
+						<tr>
+						  <th>{{index}}</th>
+						  <b><td>{{sku_table[index]["sku"]}}</td></b>
+						  <td>{{sku_table[index]["sku_description"]}}</td>
+						  <td>{{sku_table[index]["standard_crate_quantity"]}}</td>
+						  <b><td>{{sku_table[index]["standard_crate_quantity"]}}</td></b>
+						</tr>
+						{% endfor %}
+					  <tbody>
+					  </table>
+				</div><br>
+				
+				<div class="conainer">
+				<h5><b><p class="text-left">Crate List</p></b></h5>
+				<h6><p class="text-left">Crate Table</p></h6>
+				<table class="table table-bordered">
+					  <thead>
+						<tr>
+						  <th scope="col">No.</th>
+						  <th scope="col">Crate</th>
+						  <th scope="col">SKU</th>
+						  <th scope="col">Packed Quantity</th>
+						  <th scope="col">Crate Weight</th>
+						  <th scope="col">is Final Crate</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						
+					{%	for index in range(crate_table|length) %}
+						  <tr>
+						  <th>{{index}}</th>
+						  <b><td>{{crate_table[index]["crate"]}}</td></b>
+						  <td>{{crate_table[index]["sku"]}}</td>
+						  <td>{{crate_table[index]["packed_quantity"]}}</td>
+						  <td>{{crate_table[index]["crate_weight"]}}</td>
+						  <td>{{crate_table[index]["is_final_crate"]}}</td>
+						</tr>
+						{% endfor %}
+					  <tbody>
+					  </table>
+				</div>
+				
+		</div>
+</body>
+</html>

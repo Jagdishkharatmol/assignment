@@ -1,5 +1,5 @@
 # assignment
-python web development aasignment
+python web development assignment
 
 Used jinja-cli module for rendering the index_page.html
 
